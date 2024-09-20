@@ -1,0 +1,589 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    background-color: white;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: #373737;
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: #c3c1c15b 1px solid;
+    position: fixed;
+    background-color: white;
+    margin-bottom: 20px;
+}
+.hero{
+    padding-top: 100px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+}
+
+.logo{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: dodgerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #373737;
+}
+.container{
+    padding: 0 24px;
+}
+.hero .container{
+    text-align: center;
+}
+.hero-text{
+   padding: 20px 0px;
+   color: #373737;
+}
+.hero .container .hero-text h1{
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 45px;
+}
+.hero .container .hero-text p{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 32px;
+    padding-top: 10px;
+}
+.flexedButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    max-width: 327px;
+    margin: auto;
+}
+.btn-white{
+    background-color:  #ffffff;
+    padding: 12px 8px 12px 8px;
+    border: solid 1px;
+    color: #6FC247;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    width: 152px;
+}
+.btn-green{
+    background-color:  #6FC247;
+    padding: 12px 8px 12px 8px;
+    color: #ffffff;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    /* width:152px; */
+}
+.financialImage{
+    width: 100%;
+}
+.financialFirmsText h2{
+    text-align: center;
+}
+.financialFirmsText p{
+    text-align: center;
+}
+.blackSection{
+    background-color: black;
+    color: #D7D7D7;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.blackSection .container .blackSectionText h2{
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+}
+.blackSection .container .blackSectionText p{
+    text-align: center;
+    padding-bottom: 60px;
+    
+}
+.blackSection .container .blackSectionText .blackSectionSubTexts p{
+    text-align: left;
+}
+.valuationSection{
+    padding-top: 70px;
+    padding-bottom: 100px;
+    color: #373737;
+    /* color: #373737;
+    font-size: 16px;
+    font-weight: 500; */
+}
+.valuationSection .container .valuationSectionTexts{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.valuationSection .container .valuationSectionTexts h3{
+    color: #373737;
+
+}
+.writingImage {
+    width: 100%;
+    height: 310px;
+    background-image: url(assets/image.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width: 600px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /* .navbar-flex{
+        display: inline-flex;
+        align-items: center;
+    
+    } */
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100px;
+        text-align: center;
+        transition: 0.3s;
+        
+    }
+    .logo{
+        font-size: 17px;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        width: 100%;
+        left: 0px;
+        border-bottom: rgba(55, 55, 55, 0.26) 1px solid;
+    }
+    
+    .financialFirms{
+        padding-bottom: 70px;
+        color: #373737;
+    }
+    .financialImage{
+        width: 100%;
+        height: 168px;
+    }
+    .financialFirmsText{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .financialFirmsText h2{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        padding-bottom: 20px;
+    }
+    .financialFirmsText p{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+    .financialFirmsImageGrid{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr); 
+        gap: 20px; /* Optional: Adds space between grid items */
+    }
+    
+    /* .frame{
+        background: black;
+    } */
+    .frame img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .blackSection .container .blackSectionText h2{
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 27.32px;
+        text-align: center;
+        padding-bottom: 10px;
+        color: white;
+    }
+    .blackSection .container .blackSectionText p{
+        font-size: 16px;
+        font-weight: 500px;
+        line-height: 32px;
+        text-align: center;
+        padding-bottom: 60px;
+        
+    }
+    .blackSection .container .blackSectionText .blackSectionSubTexts h3{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24.59px;
+        color: #ffffff;
+        padding-bottom: 5px;
+    }
+    .blackSection .container .blackSectionText .blackSectionSubTexts p{
+        font-size: 16px;
+        font-weight: 500px;
+        line-height: 32px;
+        text-align: left;
+        padding-bottom: 25px;
+        
+    }
+    .valuationSection{
+        padding-top: 70px;
+        padding-bottom: 100px;
+        /* color: #373737;
+        font-size: 16px;
+        font-weight: 500; */
+    }
+    
+    .valuationSection .container .valuationSectionTexts h3{
+        color: #373737;
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .valuationSection .container .valuationSectionTexts p{
+        color: #373737;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+    
+    .valuationSectionSubTexts h3{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24.59px;
+        padding-bottom: 5px;
+        padding-top: 50px;
+    }
+    .valuationSectionSubTexts p{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 32px;
+        /* padding-bottom: 50px; */
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 150px;
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    /* Your CSS rules for tablets */
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /* .navbar-flex{
+        display: inline-flex;
+        align-items: center;
+    
+    } */
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100px;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .logo{
+        font-size: 17px;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        width: 100%;
+        left: 0px;
+    }
+    .hero .container .hero-text h1{
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+        line-height: 64px;
+    }
+    .hero .container .hero-text p{
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 40px;
+        padding-top: 10px;
+    }
+    .financialImage{
+        width: 100%;
+        padding-bottom: 70px;
+    }
+    .financialFirmsText h2{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        padding-bottom: 20px;
+        
+    }
+    .financialFirmsText p{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 40px;
+        padding-bottom: 70px;
+    }
+    .financialFirmsImageGrid{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr); 
+        gap: 20px; /* Optional: Adds space between grid items */
+        padding-bottom: 100px;
+    }
+    .blackSection .container .blackSectionText h2{
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 32.78px;
+        color: white;
+    }
+    .blackSection .container .blackSectionText p{
+        font-size: 20px;
+        font-weight: 500px;
+        line-height: 40px;
+        text-align: center;
+        padding-bottom: 60px;
+        
+    }
+    .valuationSection{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        /* color: #373737;
+        font-size: 16px;
+        font-weight: 500; */
+    }
+    .valuationSection .container .valuationSectionTexts h3{
+        font-size: 24px;
+        font-weight: 800;
+    }
+    .valuationSection .container .valuationSectionTexts p{
+        color: #373737;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 40px;
+    }
+    .valuationSection .container section{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .writingImage{
+        width: 100%;
+        height: 643px;
+        
+    }
+    .valuationSectionSubTexts{
+        padding: 30px;
+        max-width: 600px;
+    }
+    .valuationSectionSubTexts h3{
+        font-size: 18px;
+        font-weight: 700px;
+        line-height: 24.59px;
+
+    }
+    .valuationSectionSubTexts p{
+        font-size: 16px;
+        font-weight: 500px;
+        line-height: 32px;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 150px;
+    }
+
+  }
+
+@media (min-width: 900px) {
+    .navbar{
+        padding: 30px;
+    }
+    .logo img{
+        height: 23px;
+        width: 169.85px;
+    }
+    .nav-link a{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .hero .container .hero-text h1{
+        font-size: 64px;
+        line-height: 87.42px;
+        font-weight: 800;
+    }
+    .hero .container .hero-text p{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 43.2px;
+        padding-top: 20px;
+    }
+    .financialFirms .container .financialFirmsText h2{
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 43.2px;
+        padding-bottom: 20px;
+        color: #373737;
+    }
+    .financialFirms .container .financialFirmsText p{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 40px;
+        padding-bottom: 70px;
+    }
+    .frame img{
+        width: 100%;
+        display: flex;
+        /* justify-content: space-evenly; */
+    }
+    .grid{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 100px;
+    }
+    .financialFirmsImageGrid{
+        /* width: 100%; */
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 40px; /* Optional: Adds space between grid items */
+    }
+    .blackSection .container .blackSectionText h2{
+       font-size: 40px;
+       font-weight: 800;
+       line-height: 54.64px; 
+    }
+    .black{
+        display: flex;
+        justify-content: center;
+    }
+    .blackSectionSubTexts{
+        padding-right: 20px;
+    }
+    .blackSection .container .blackSectionText p{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        max-width: 893px;
+    }
+    .valuationSection .container .valuationSectionTexts{
+        padding-bottom: 100px;
+    }
+    .blackSectionSubTextContainer{
+        display: flex;
+    }
+
+    .valuationSectionTexts h3{
+        font-size: 32px;
+        font-weight: 800px;
+        line-height: 43.71px;
+
+    }
+    .valuationSectionTexts p{
+        font-size: 20px;
+        font-weight: 500px;
+        line-height: 32px;
+    }
+    .valuationSection .container section{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .writingImage{
+        width: 100%;
+        height: 693px;
+        
+    }
+    .valuationSectionSubTexts{
+        padding: 30px;
+        max-width: 600px;
+    }
+    .valuationSectionSubTexts h3{
+        font-size: 24px;
+        font-weight: 800px;
+        line-height: 32.78px;
+
+    }
+    .valuationSectionSubTexts p{
+        font-size: 20px;
+        font-weight: 500px;
+        line-height: 32px;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 150px;
+    }
+
+}
+  
